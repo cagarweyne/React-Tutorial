@@ -6,7 +6,7 @@ React is simply a JavaScript library whose single purpose is to help you build l
 
 ##Lesson 2:  What is JSX? 
 
-This is a JavaScript syntax that lets you write HTML inside your JavaScript. I know that might sound a little off, HTML inside a JavaScript?! According to Facebook, you don't have to use JSX with React but they highly recommend that you do since it is a concise and familiar syntax for defining tree like structures. You can read more about JSX [here](https://facebook.github.io/react/docs/jsx-in-depth.html) on the facebook API docs.  The browsers don’t recognise a JSX files, JSX files get compiledto JavaScript that are then passed to the React.createElement function. 
+This is a JavaScript syntax that lets you write HTML inside your JavaScript. I know that might sound a little off, HTML inside a JavaScript?! According to Facebook, you don't have to use JSX with React but they highly recommend that you do since it is a concise and familiar syntax for defining tree like structures. You can read more about JSX [here](https://facebook.github.io/react/docs/jsx-in-depth.html) on the facebook API docs.  The browsers don’t recognise a JSX files, JSX files get compiled to JavaScript that are then passed to the React.createElement function. 
 
 ####JSX syntax 
 
