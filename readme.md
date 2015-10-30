@@ -28,10 +28,10 @@ This compiles to JavaScript
 }
 ```
 
-In React it is easier to write code in JSX than writing it in Vanilla JS,espcially when you start to nest more html elements - the function call in the vanilla js example will get more complex. 
+In React it is easier to write code in JSX than writing it in Vanilla JS, espcially when you start to nest more html elements - the function call in the vanilla js example will get more complex. 
 
 JSX is an extension of javascript that lets us write what looks like HTML alongside our javascript
-JSX must first be complied from jsx to javascript so that the browser canunderstand what's going on
+JSX must first be complied from jsx to javascript so that the browser can understand what's going on.
 We use JSX because it's a lot more clear and concise about the HTML structure and React components than the equivalent Javascript.  
 
 Lesson 3: coming soon 
