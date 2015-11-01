@@ -34,25 +34,6 @@ JSX is an extension of javascript that lets us write what looks like HTML alongs
 JSX must first be complied from jsx to javascript so that the browser can understand what's going on.
 We use JSX because it's a lot more clear and concise about the HTML structure and React components than the equivalent Javascript.  
 
-turn <div>Hello World!</div>
-      
-  }
-}
-
-This compiles to JavaScript 
-
-{
-  render: function() {
-   return React.createElement('div', null, 'Hello World!');
-  }
-}
-
-In React it is easier to write code in JSX than writing it in Vanilla JS,espcially when you start to nest more html elements - the function call in the vanilla js example will get more complex. 
-
-JSX is an extension of javascript that lets us write what looks like HTML alongside our javascript
-JSX must first be complied from jsx to javascript so that the browser canunderstand what's going on
-We use JSX because it's a lot more clear and concise about the HTML structure and React components than the equivalent Javascript.  
-
 Lesson 3: Hello React!
 
 Before you create any React component you need to get the library, you can download the latest and greatest version of react from the official Facebook g Github page [here](https://facebook.github.io/react/downloads.html) and then you will have a folder that contains several files.
