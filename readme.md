@@ -98,7 +98,6 @@ Here is our boiler plate code for writing a simple Hello React! To the screen.
   </body>
 </html>
 
-
 ```
 
 
