@@ -56,12 +56,7 @@ Here is our boiler plate code for writing a simple Hello React! To the screen.
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
-
-
-    <style>
-      img {
-        width: 150px; 
-      }
+    
     </style>
   </head>
   <body>
