@@ -38,7 +38,7 @@ We use JSX because it's a lot more clear and concise about the HTML structure an
 
 Before you create any React component you need to get the library, you can download the latest and greatest version of react from the official Facebook g Github page [here](https://facebook.github.io/react/downloads.html) and then you will have a folder that contains several files.
 
-As of the time of this writing (11/2015), you will see two files and a read me file. One folder contains the react minified and non minified versions and the other folder contains some cool examples written in react. 
+As of the time of this writing (Nov 2015), you will see two files and a read me file. One folder contains the react minified and non minified versions and the other folder contains some cool examples written in react. 
 
 To quickly get started writing react apps, you will need to have a browser side jsx converter and if you also want to write ES6 then you can use browser.js, which is provided by Babel that will transform your jsx code into js and also transpile ES6 into ES5 for browsers that don't yet fully support ES6. For the purposes of this tutorial, we will include browser.js via a CDN and include it in our HTML file. 
 
