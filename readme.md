@@ -1,6 +1,6 @@
 #React tutorial beginners 
 
-##Lesson 1: What is React? 
+##Lesson 1: What is REACT? 
 
 React is simply a JavaScript library whose single purpose is to help you build large applications with data that changes over time. In a nutshell, React is simply the V in the Model View Controller architecture (MVC). As such, it is difficult to compare it to other frameworks like Angular. When building apps in React you build things one a time using components. React was built by Facebook and released in early 2013, there is also React Native, which uses React, to create native iOs and Android apps. But React is only for web browsers in the front end.  
 
