@@ -92,6 +92,9 @@ Here is our boiler plate code for writing a simple Hello React! To the screen.
 
 ```
 
+##Lesson 4: Props
+
+Now that we know how to render content to the page, we want to be able to provide some data that can be used bythe component. The simple Hello React example we created is just a static component. We're going to expand our Hello React example and this time we will provide some data that can be used by the component. 
 
 
 
