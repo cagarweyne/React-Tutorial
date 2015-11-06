@@ -136,6 +136,7 @@ ReactDOM.render(
 
 ```
 
+Right, this lesson was all about props, so let's cut to the chase. First of all what are props? Props in React is simply an object that a component has access to. The data inside this component is passed to the compoenent when the component is rendered. This will make more sense when we write it in code. So: 
 
 
  
