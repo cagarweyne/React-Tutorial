@@ -136,7 +136,20 @@ ReactDOM.render(
 
 ```
 
-Right, this lesson was all about props, so let's cut to the chase. First of all what are props? Props in React is simply an object that a component has access to. The data inside this component is passed to the compoenent when the component is rendered. This will make more sense when we write it in code. So: 
+Right, this lesson was all about props, so let's cut to the chase. First of all what are props? Props in React is simply an object that a component has access to. The data inside this component is passed to the compoenent when the component is rendered. This will make more sense when we write it in code. So, the first step in our example is to create an options object, ths object will be passed in when we render. 
+
+
+
+``` javascript 
+
+var options = {
+  
+title: 'Inbox',
+number: '19'
+  
+}
+
+```
 
 
  
