@@ -171,5 +171,4 @@ ReactDOM.render(
 
 ```
 
-A quick explanation on what is happening here: in the first step we created an object called options, this object has two keys a title key and a number key. Then we replaced the hard coded Message string and number with {this.props.options.title} note the use of the curly braces, this important as it tells React that this is JavaScript code that needs to be executed. 
- 
+A quick explanation on what is happening here: in the first step we created an object called options, this object has two keys a title key and a number key. Then we replaced the hard coded Message string and number with {this.props.options.title} note the use of the curly braces, this important as it tells React that this is JavaScript code that needs to be executed. Every component in React is an object, and just like you have access to the Window and the 'this' keyword in the DOM, every React component is given an empty props object. Whenever you create a component and then render that component using React's render method you have the option to attach data to the empty props object that can
