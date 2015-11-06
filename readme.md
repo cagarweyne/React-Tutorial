@@ -151,5 +151,25 @@ number: '19'
 
 ```
 
+Now, in th enext step I'm going to replace the hard coded string 'Messages' with this.props.options.title and the number with this.props.options.number: 
 
+``` javascript 
+
+var Badge = React.createClass({
+    render: function() {
+      return <button className="btn btn-primary" type="button">
+        {this.props.options.title} <span className="badge">{this.props.options.title}</span>
+      </button>
+    }
+  });
+
+ReactDOM.render(
+        <Badge />,
+        document.getElementById('content')
+      );
+
+
+```
+
+A quick explanation on what is happening here: in the first step we created an object called options, this object has two keys a title key and a number key. Then we replaced the hard coded Message string and number with {this.props.options.title} note the use of the curly braces, this important as it tells React that this is JavaScript code that needs to be executed. 
  
