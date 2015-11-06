@@ -108,6 +108,11 @@ var Badge = React.createClass({
     }
   });
 
+ReactDOM.render(
+        <Badge />,
+        document.getElementById('content')
+      );
+
 ```
 
 
