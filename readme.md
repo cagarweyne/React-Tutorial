@@ -117,6 +117,24 @@ ReactDOM.render(
 
 When creating React components the converntion is to make the first letter of the name of the component upper case,  this is not required but it is general convention used by React developers. When you load up the file in the browser, you will find that the CSS styling is not being applied. This is one of the many 'Gotchas' you will come across when using React for the first time. You probably got an error in the form `Unkown DM property class. Did you mean className?`. As you know, class is a reserved keyword in JavaScript and in JSX class refers to a component, and as such, you can not use it inside your JSX file. Whenever you are working with DOM elements, instead of using class to apply CSS class names, you have to use className for your styling to be be applied.  
 
+Here is our updated code with the correcy usage of class in JSX files as className: 
+
+``` javascript 
+
+var Badge = React.createClass({
+    render: function() {
+      return <button className="btn btn-primary" type="button">
+        Messages <span className="badge">4</span>
+      </button>
+    }
+  });
+
+ReactDOM.render(
+        <Badge />,
+        document.getElementById('content')
+      );
+
+```
 
 
 
