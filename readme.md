@@ -98,7 +98,17 @@ Now that we know how to render content to the page, we want to be able to provid
 
 Since we already have the Bootstrap framework in our boiler plate code, we will use the badge component. So I'm just going to copy the HTML code along with classes. Here's how our code will look like: 
 
+``` javascript 
 
+var Badge = React.createClass({
+    render: function() {
+      return <button class="btn btn-primary" type="button">
+        Messages <span class="badge">4</span>
+      </button>
+    }
+  });
+
+```
 
 
 
