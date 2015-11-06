@@ -94,7 +94,9 @@ Here is our boiler plate code for writing a simple Hello React! To the screen.
 
 ##Lesson 4: Props
 
-Now that we know how to render content to the page, we want to be able to provide some data that can be used bythe component. The simple Hello React example we created is just a static component. We're going to expand our Hello React example and this time we will provide some data that can be used by the component. 
+Now that we know how to render content to the page, we want to be able to provide some data that can be used by the component. The simple Hello React example we created is just a static component. We're going to expand our Hello React example and this time we will provide some data that can be used by the component.
+
+Since we already have the Bootstrap framework in our boiler plate code, we will use the badge component. So I'm just going to copy the HTML code along with classes. Here's how our code will look like: 
 
 
 
