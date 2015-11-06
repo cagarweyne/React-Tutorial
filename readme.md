@@ -136,7 +136,7 @@ ReactDOM.render(
 
 ```
 
-Right, this lesson was all about props, so let's cut to the chase. First of all what are props? Props in React is simply an object that a component has access to. The data inside this component is passed to the compoenent when the component is rendered. This will make more sense when we write it in code. So, the first step in our example is to create an options object, ths object will be passed in when we render. 
+Right, this lesson was all about props, so let's cut to the chase. First of all what are props? Props in React is simply an object that a component has access to. The data inside this object is passed to the component when the component is rendered. This will make more sense when we write it in code. So, the first step in our example is to create an options object, this object will be passed in when we render the component. 
 
 
 
@@ -151,7 +151,7 @@ number: '19'
 
 ```
 
-Now, in th enext step I'm going to replace the hard coded string 'Messages' with this.props.options.title and the number with this.props.options.number: 
+Now, in the next step I'm going to replace the hard coded string 'Messages' with this.props.options.title and the number with this.props.options.number: 
 
 ``` javascript 
 
@@ -171,7 +171,7 @@ ReactDOM.render(
 
 ```
 
-A quick explanation on what is happening here: in the first step we created an object called options, this object has two keys a title key and a number key. Then we replaced the hard coded 'Message' string and number with `{this.props.options.title}` note the use of the curly braces, this important as it tells React that this is JavaScript code that needs to be executed. Every component in React is an object, and just like you have access to the Window and the 'this' keyword in the DOM, every React component is given an empty props object. Whenever you create a component and then render that component using React's render method you have the option to attach data to the empty props object that can be used by the component via `{this.props}`. Now for the last step, we have to pass the options object when the component is rendered: 
+A quick explanation on what is happening here: in the first step we created an object called options, this object has two keys a title key and a number key. Then we replaced the hard coded 'Message' string and number with `{this.props.options.title}` note the use of the curly braces, this is important as it tells React that this is JavaScript code that needs to be executed. Every component in React is an object, and just like you have access to the Window and the 'this' keyword in the DOM, every React component is given an empty props object. Whenever you create a component and then render that component using React's render method you have the option to attach data to the empty props object that can be used inside the component via `{this.props}`. Now for the last step, we have to pass the options object when the component is rendered: 
 
 ```javascript 
 
@@ -189,7 +189,7 @@ Here we are simply naming the object that will be attached to the props object a
 var Badge = React.createClass({
     render: function() {
       return <button className="btn btn-primary" type="button">
-        {this.props.options.title} <span className="badge">{this.props.options.title}</span>
+        {this.props.options.title} <span className="badge">{this.props.options.number}</span>
       </button>
     }
   });
@@ -201,4 +201,4 @@ ReactDOM.render(
 
 ```
 
-When you click on save and refresh your screen you should see the button update with our title from the options object thatis attached to props likewise the number should also change to 19. So there you have it! You have now learned what are props in React. In the next lesson we will create a composition of components, in other words, we will create views within views. 
+When you click on save and refresh your screen you should see the button update with our title from the options object that is attached to props, likewise the number should also change to 19. So there you have it! You have now learned what props are in React. In the next lesson we will create a composition of components, in other words, we will create views within views. 
