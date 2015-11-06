@@ -115,6 +115,7 @@ ReactDOM.render(
 
 ```
 
+When creating React components the converntion is to make the first letter of the name of the component upper case,  this is not required but it is general convention used by React developers. 
 
 
 
