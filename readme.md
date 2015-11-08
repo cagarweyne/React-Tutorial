@@ -1,4 +1,4 @@
-#React tutorial beginners 
+#React Tutorial Beginners 
 
 ##Lesson 1: What is React? 
 
