@@ -370,4 +370,7 @@ handleClick: function(){
     }
   });
 ```
-The callback function is passed down the same way we passed down the text key, so handleClick is the key and the value is the function that is attached to this component called handleClick. In this example, I have given the callback function to the last instance of the Description component. When you click on the text for this component you should see the alert message. 
+The callback function is passed down the same way we passed down the text key, so handleClick is the key and the value is the function that is attached to this component called handleClick. In this example, I have given the callback function to the last instance of the Description component. When you click on the text for this component you should see the alert message.
+
+As well has having access to everything attached to the props, child components also have access to any children of the component, in the previous examples we have been self closing each of the Description component like this: `<Description text="Building your apps in React means that they will be very fast."/>` however, you can also close the component in a similar way you would close a HTML element: 
+`<Description text="Building your apps in React means that they will be very fast."> </Description>` this you way you can include content between the opening and closing tags: `<Description text="Building your apps in React means that they will be very fast."> The contents in here are accessbile inside the Description component as well.</Description>`. To get access to the  
