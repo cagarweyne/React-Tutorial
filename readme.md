@@ -291,7 +291,7 @@ ReactDOM.render(
 ```
 ###using props
 
-When nesting components you can also down items to the child components and they will have access to these items via its props object. In the Description component that we created previously, we hard coded the text description, however, to reuse this component we can make a small change inside the render method of the Description component: 
+When nesting components you can also pass down data to the child components and they will have access to these items via its props object. In the Description component that we created previously, we hard coded the text description, however, to reuse this component we can make a small change inside the render method of the Description component: 
 
 ```javascript 
 var Description = React.createClass({
@@ -319,5 +319,20 @@ var Container = React.createClass({
     }
   });
 ```
-So here, we are doing exactly the same thing as before, only this time we pass in the text of the description and inside the Description component we display this in between the p tag by using the curly braces `{this.props.text}`. This will produce exactly the same result as in the previous example, only this time we have made the component reusable. This means that we can call the same component multiple times and pass in a different set of text: 
+So here, we are doing exactly the same thing as before, only this time we pass in the text of the description and inside the Description component we display this in between the p tag by using the curly braces `{this.props.text}`. This will produce exactly the same result as in the previous example, only this time we have made the component reusable. This means that we can call the same component multiple times and pass in a different set of text:
 
+```javascript 
+var Container = React.createClass({
+  render: function(){
+    return (
+      <div>
+        <Hello />
+        <Description text="React is simply a JavaScript library whose single purpose is to help you build large applications with data that changes over time. In a nutshell, React is simply the V in the Model View Controller architecture (MVC)"/>
+        <Description text="Building your apps in React means that they will be very fast."/>
+        <Description text="React was created by Facebook and released in 2013."/>
+      </div>
+      );
+    }
+  });
+```
+In the above code, we are reusing the Description component multiple times. This is really useful, because it means that you can create generic components and reuse them at will. The things that you can pass down aren't limited to key value data, you can also pass down functions that can be called by the child component: 
