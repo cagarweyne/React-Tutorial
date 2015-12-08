@@ -370,4 +370,4 @@ handleClick: function(){
     }
   });
 ```
-The callback function is passed down the same way we passed down the text key, so handleClick is the key and the value is function that is attached to this component called handleClick. In this example, I have given the callback function to the last instance of the Description component. When you click on the text for this component you should see the alert message. It's also worth noting that React does not throw an error for the two other components that don't have the callback function passed down. 
+The callback function is passed down the same way we passed down the text key, so handleClick is the key and the value is the function that is attached to this component called handleClick. In this example, I have given the callback function to the last instance of the Description component. When you click on the text for this component you should see the alert message. 
