@@ -231,10 +231,57 @@ var Container = React.createClass({
     return (
       <div>
         <Hello />
-          <Description /> 
+        <Description /> 
       </div>
       );
     }
   });
 ```
+This component will act as a container for the two other components, so this component returns a div whose children are two other components, the Hello component and the Description component. Note the use of the self closing tag, this is important otherwise React will throw an error. 
 
+Next we need to render the Container component instead of the Hello component that we were rendering before: 
+
+```javascript 
+  ReactDOM.render(
+    <Container />,
+    document.getElementById('content')
+    );
+```
+
+When the Container component is rendered by React it contains other nested components inside, so React will also render the nested components and return them as individual elements on the page. Here is the code altogether: 
+
+```javascript 
+var Hello = React.createClass({
+   render: function(){
+    return (
+      <h1 className="text-center">Hello React!</h1>
+      );
+    }
+  });
+
+var Description = React.createClass({
+    render: function(){
+      return (
+        <p>React is simply a JavaScript library whose single purpose is to help you build large applications with data that changes over time. In a nutshell, React is simply the V in the Model View Controller architecture (MVC)
+        </p>   
+      );
+    }
+  });
+
+var Container = React.createClass({
+  render: function(){
+    return (
+      <div>
+        <Hello />
+        <Description /> 
+      </div>
+      );
+    }
+  });
+
+
+ReactDOM.render(
+  <Container />,
+    document.getElementById('content')
+  );
+```
