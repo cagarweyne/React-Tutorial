@@ -289,3 +289,35 @@ ReactDOM.render(
     document.getElementById('content')
   );
 ```
+###using props
+
+When nesting components you can also down items to the child components and they will have access to these items via its props object. In the Description component that we created previously, we hard coded the text description, however, to reuse this component we can make a small change inside the render method of the Description component: 
+
+```javascript 
+var Description = React.createClass({
+  render: function(){
+    return (
+        <p>
+          {this.props.text}
+        </p>   
+      );
+    }
+  });
+```
+
+Instead of hardcoding in the text, we have replaced it with a reference to get the text from a text key that is attached to the props object. You can call the key value that you will attache to the props object of the component whatever you like. In this case here I have called it text, but it could be called description or something else. Now when this component is nested inside its parent component, the Container, we will need to specify a texy property on the props object and assign a value like this: 
+
+```javascript 
+var Container = React.createClass({
+  render: function(){
+    return (
+      <div>
+        <Hello />
+        <Description text="React is simply a JavaScript library whose single purpose is to help you build large applications with data that changes over time. In a nutshell, React is simply the V in the Model View Controller architecture (MVC)"/> 
+      </div>
+      );
+    }
+  });
+```
+So here, we are doing exactly the same thing as before, only this time we pass in the text of the description and inside the Description component we display this in between the p tag by using the curly braces `{this.props.text}`. This will produce exactly the same result as in the previous example, only this time we have made the component reusable. This means that we can call the same component multiple times and pass in a different set of text: 
+
