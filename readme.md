@@ -335,7 +335,7 @@ var Container = React.createClass({
     }
   });
 ```
-In the above code, we are reusing the Description component multiple times. This is really useful, because it means that you can create generic components and reuse them at will. The things that you can pass down aren't limited to key value data, you can also pass down functions that can be called by the child component. To demonstrate this, I'm simply going to bind a click event handler to the p element inside the Description component: 
+In the above code, we are reusing the Description component multiple times. This is really useful, because it means that you can create generic components and reuse them at will. The things that you can pass down aren't limited to key value data, you can also pass down functions or methods that can be called by the child component. To demonstrate this, I'm simply going to add a click event handler to the p element inside the Description component: 
 
 ```javascript 
 var Description = React.createClass({
@@ -370,4 +370,4 @@ handleClick: function(){
     }
   });
 ```
-The callback function will be given to the last instance of the Description component. When you click on the text for this component you should see the alert message. It's also worth noting that React does not throw an error for the two other components that don't have the callback function passed down. 
+The callback function is passed down the same way we passed down the text key, so handleClick is the key and the value is function that is attached to this component called handleClick. In this example, I have given the callback function to the last instance of the Description component. When you click on the text for this component you should see the alert message. It's also worth noting that React does not throw an error for the two other components that don't have the callback function passed down. 
