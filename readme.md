@@ -2,7 +2,9 @@
 
 ##Lesson 1: What is React? 
 
-React is simply a JavaScript library whose single purpose is to help you build large applications with data that changes over time. In a nutshell, React is simply the V in the Model View Controller architecture (MVC). As such, it is difficult to compare it to other frameworks like Angular. When building apps in React you build things one a time using components. React was built by Facebook and released in early 2013, there is also React Native, which uses React, to create native iOs and Android apps. But React is only for web browsers in the front end.  
+React is simply a JavaScript library whose single purpose is to help you build large applications with data that changes over time. In a nutshell, React is simply the V in the Model View Controller architecture (MVC). As such, it is difficult to compare it to other frameworks like Angular. When building apps in React you build things one a time using components. React was built by Facebook and released in early 2013, there is also React Native, which uses React, to create native iOs and Android apps. But React is only for web browsers in the front end.
+
+One of the reasons why React is becoming very popular is the way in which it interactcs with the DOM. Reading and writing to the DOM is slow and expensive. Other JavaScript frameworks constantly read and write to the DOM even when there is minimal change, React however, uses something called the virtual DOM as an intermediary before accessing the real DOM. The React virtual DOM is nothing magical, it's just a Javascript object, and reading and writing to an object is much faster than doing the same thing with the DOM. This JavaScript object (the virual DOM) is a mirror of the real DOM representation, this means that React never reads from the real DOM and it only writes to the real DOM if there is a change in the virtual DOM that needs to be reflected in the real DOM.  
 
 ##Lesson 2:  What is JSX? 
 
