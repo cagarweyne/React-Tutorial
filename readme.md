@@ -335,4 +335,39 @@ var Container = React.createClass({
     }
   });
 ```
-In the above code, we are reusing the Description component multiple times. This is really useful, because it means that you can create generic components and reuse them at will. The things that you can pass down aren't limited to key value data, you can also pass down functions that can be called by the child component: 
+In the above code, we are reusing the Description component multiple times. This is really useful, because it means that you can create generic components and reuse them at will. The things that you can pass down aren't limited to key value data, you can also pass down functions that can be called by the child component. To demonstrate this, I'm simply going to bind a click event handler to the p element inside the Description component: 
+
+```javascript 
+var Description = React.createClass({
+  render: function(){
+    return (
+        <p onClick={this.props.handleClick}>
+          {this.props.text}
+        </p>   
+      );
+    }
+  });
+```
+
+Then in the Container component we need to create this method and we can add this just before the render method: 
+
+```javascript 
+var Container = React.createClass({
+handleClick: function(){
+    alert("function called from Description component");
+  },
+  render: function(){
+    return (
+      <div>
+        <Hello />
+        <Description text="React is simply a JavaScript library whose single purpose is to help you build large applications with data that changes over time. In a nutshell, React is simply the V in the Model View Controller architecture (MVC)"/>
+        
+        <Description text="Building your apps in React means that they will be very fast."/>
+        
+        <Description text="React was created by Facebook and released in 2013." handleClick={this.handleClick}/>
+      </div>
+      );
+    }
+  });
+```
+The callback function will be given to the last instance of the Description component. When you click on the text for this component you should see the alert message. It's also worth noting that React does not throw an error for the two other components that don't have the callback function passed down. 
