@@ -374,7 +374,27 @@ The callback function is passed down the same way we passed down the text key, s
 
 ##Lesson 6: Lists 
 
-As we saw previously, we can reuse components by passing down different data and have that component do all of the rendeding without creating multiple instances of the same functionality. React lets you extend this reusability feature with the use of a map function when you want to display lists. I have put together a component called Thumbnail, which returns a div that has an img, another div, h3 tag and a p tag inside it: 
+As we saw previously, we can reuse components by passing down different data and have that component do all of the rendering without creating multiple instances of the same functionality. React lets you extend this reusability feature with the use of a map function when you want to display lists. First I will create an object with one property, which is an array that will be passed to the rendered component: 
+
+```javascript 
+    var options = {
+      thumbnailData:  [{
+        title: 'Show Courses',
+        number: 12,
+        header: 'Learn React',
+        description: 'React is a fantastic new front end library for rendering web pages. React is a fantastic new front end library for rendering web pages.',
+        imageUrl: 'https://raw.githubusercontent.com/wiki/facebook/react/react-logo-1000-transparent.png'
+      },{
+        title: 'Show Courses',
+        number: 25,
+        header: 'Learn Gulp',
+        description: 'Gulp will speed up your development workflow.  Gulp will speed up your development workflow.  Gulp will speed up your development workflow.',
+        imageUrl: 'http://brunch.io/images/others/gulp.png'
+      }]
+    };
+```
+
+Next I have put together a component called Thumbnail, which returns a div that has an img, another div, h3 tag and a p tag inside it: 
 
 ```javascript 
 var Thumbnail = React.createClass({
@@ -408,4 +428,11 @@ I'm making use of the CSS bootstrap here, as I am using a few classes for stylin
   });
 ```
 
-This is where most of the action is happening, the ThumbnailList component excpects an options propery to be attached to its props object and this options object will contain one array called thumbnailData. Here I have used the map function to return a new array called list. The map function is called on each element inside thumbnailData array and a Thumbnail component is returned for each instance in the array along with a prop called thumbnail. 
+This is where most of the action is happening, the ThumbnailList component excpects an options propery to be attached to its props object and this options object will contain one array called thumbnailData. Here I have used the map function to return a new array called list. The map function is called on each element inside thumbnailData array and a Thumbnail component is returned for each instance in the array along with a prop called thumbnail. Up to this point we haven't actually rendered the component or passed the options object as prop to the ThumbnailList component, so let's do that now: 
+
+```javascript 
+  ReactDOM.render(
+    <ThumbnailList options={options}/>,
+      document.getElementById('content')
+    );
+```
