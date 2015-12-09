@@ -371,3 +371,41 @@ handleClick: function(){
   });
 ```
 The callback function is passed down the same way we passed down the text key, so handleClick is the key and the value is the function that is attached to this component called handleClick. In this example, I have given the callback function to the last instance of the Description component. When you click on the text for this component you should see the alert message.
+
+##Lesson 6: Lists 
+
+As we saw previously, we can reuse components by passing down different data and have that component do all of the rendeding without creating multiple instances of the same functionality. React lets you extend this reusability feature with the use of a map function when you want to display lists. I have put together a component called Thumbnail, which returns a div that has an img, another div, h3 tag and a p tag inside it: 
+
+```javascript 
+var Thumbnail = React.createClass({
+  render: function() {
+    return <div className="col-sm-6 col-md-4">
+      <div className="thumbnail">
+        <img src={this.props.thumbnail.imageUrl} alt="..."></img>
+        <div className="caption">
+          <h3>{this.props.thumbnail.header}</h3>
+          <p>{this.props.thumbnail.description}</p>
+        </div>
+      </div>
+    </div>
+  }
+});
+```
+
+I'm making use of the CSS bootstrap here, as I am using a few classes for styling purposes. This component expects an object to be attached to props that contains a url link for the img tag, a header title and description for the p tag. This component will be returned multiple times depending on the available dataset. Next I have created another component called Thumbnail list: 
+
+```javascript 
+  var ThumbnailList = React.createClass({
+    render: function() {
+      var list = this.props.options.thumbnailData.map(function(thumbnail){
+        return <Thumbnail thumbnail={thumbnail} />
+      });
+
+      return <div>
+        {list}
+      </div>
+    }
+  });
+```
+
+This is where most of the action is happening, the ThumbnailList component excpects an options propery to be attached to its props object and this options object will contain one array called thumbnailData. Here I have used the map function to return a new array called list. The map function is called on each element inside thumbnailData array and a Thumbnail component is returned for each instance in the array along with a prop called thumbnail. 
