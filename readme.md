@@ -437,3 +437,48 @@ Up to this point we haven't actually rendered the component or passed the option
 
 We have gone through a fair bit of code separately, here is a all of the code that we have written altogether: 
 
+```javascript 
+    var options = {
+      thumbnailData:  [{
+        header: 'Learn React',
+        description: 'React is fast frontend library for rendering web pages.',
+        imageUrl: 'https://raw.githubusercontent.com/wiki/facebook/react/react-logo-1000-transparent.png'
+      },{
+        header: 'JavaScript',
+        description: 'JavaScript is a high-level, dynamic, untyped, and interpreted programming language.',
+        imageUrl: 'https://www.freeenergymedia.com/wp-content/uploads/2015/03/20120709-164039-Javascript.png'
+      }]
+    };
+
+  var Thumbnail = React.createClass({
+    render: function() {
+      return <div className="col-sm-6 col-md-4">
+        <div className="thumbnail">
+          <img src={this.props.thumbnail.imageUrl} alt="..."></img>
+          <div className="caption">
+            <h3>{this.props.thumbnail.header}</h3>
+            <p>{this.props.thumbnail.description}</p>
+          </div>
+        </div>
+      </div>
+    }
+  });
+
+  var ThumbnailList = React.createClass({
+    render: function() {
+      var list = this.props.options.thumbnailData.map(function(thumbnail){
+        return <Thumbnail thumbnail={thumbnail} />
+      });
+
+      return <div>
+        {list}
+      </div>
+    }
+  });
+
+
+  ReactDOM.render(
+        <ThumbnailList options={options}/>,
+        document.getElementById('content')
+      );
+```
