@@ -412,7 +412,7 @@ var Thumbnail = React.createClass({
 });
 ```
 
-I'm making use of the CSS bootstrap here, as I am using a few classes for styling purposes. This component expects an object to be attached to props that contains a url link for the img tag, a header title and description for the p tag. This component will be returned multiple times depending on the available dataset. Next I have created another component called Thumbnail list: 
+I'm making use of the CSS bootstrap here, as I am using a few classes for styling purposes. This component expects an object to be attached to props that contains a url link for the img tag, a header title and description for the p tag. This component will be returned multiple times depending on the available dataset, based on the array in our options object this will return to different instances of Thumbnail, as there are only two elements in the thumbnailData array. But this can be as little or as much as you need, it depends on the number of elements that you have in the array. Next I have created another component called Thumbnail list: 
 
 ```javascript 
   var ThumbnailList = React.createClass({
@@ -428,7 +428,9 @@ I'm making use of the CSS bootstrap here, as I am using a few classes for stylin
   });
 ```
 
-This is where most of the action is happening, the ThumbnailList component excpects an options propery to be attached to its props object and this options object will contain one array called thumbnailData. Here I have used the map function to return a new array called list. The map function is called on each element inside thumbnailData array and a Thumbnail component is returned for each instance in the array along with a prop called thumbnail. Up to this point we haven't actually rendered the component or passed the options object as prop to the ThumbnailList component, so let's do that now: 
+This is where most of the action is happening, the ThumbnailList component expects an options property to be attached to its props object and this options object will contain one array called thumbnailData. Here I have used the map function to return a new array called list. The map function is called on each element inside thumbnailData array and a Thumbnail component is returned for each instance in the array along with a prop called thumbnail - this prop is an object that will be used inside the Thumbnail component. In the the Thumbnail component you will observe that we are using this object to get the url for the img tage, the header title and description for the p tag. And finally, we return a div and inside that will be any number of Thumbnail components, this obvously depends on the number of elements that can be mapped over, in our example here we know that this is two.
+
+Up to this point we haven't actually rendered the component or passed the options object as prop to the ThumbnailList component, it's important to understand the way we render components in React. The only component that we need to render is the ThumnailList component, the Thumbnail component is nested inside this component so this means that it will get rendered as well: 
 
 ```javascript 
   ReactDOM.render(
