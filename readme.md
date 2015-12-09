@@ -379,17 +379,13 @@ As we saw previously, we can reuse components by passing down different data and
 ```javascript 
     var options = {
       thumbnailData:  [{
-        title: 'Show Courses',
-        number: 12,
         header: 'Learn React',
-        description: 'React is a fantastic new front end library for rendering web pages. React is a fantastic new front end library for rendering web pages.',
+        description: 'React is fast frontend library for rendering web pages.',
         imageUrl: 'https://raw.githubusercontent.com/wiki/facebook/react/react-logo-1000-transparent.png'
       },{
-        title: 'Show Courses',
-        number: 25,
-        header: 'Learn Gulp',
-        description: 'Gulp will speed up your development workflow.  Gulp will speed up your development workflow.  Gulp will speed up your development workflow.',
-        imageUrl: 'http://brunch.io/images/others/gulp.png'
+        header: 'JavaScript',
+        description: 'JavaScript is a high-level, dynamic, untyped, and interpreted programming language.',
+        imageUrl: 'https://www.freeenergymedia.com/wp-content/uploads/2015/03/20120709-164039-Javascript.png'
       }]
     };
 ```
@@ -438,3 +434,6 @@ Up to this point we haven't actually rendered the component or passed the option
       document.getElementById('content')
     );
 ```
+
+We have gone through a fair bit of code separately, here is a all of the code that we have written altogether: 
+
