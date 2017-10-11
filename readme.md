@@ -207,7 +207,7 @@ ReactDOM.render(
 
 When you click on save and refresh your screen you should see the button update with our title from the options object that is attached to props, likewise the number should also change to 19. So there you have it! You have now learned what props are in React. In the next lesson we will create a composition of components, in other words, we will create views within views. 
 
-##Lesson 5: Views within views
+## Lesson 5: Views within views
 
 In react you can nest components inside other components. Just like you have child elements inside a Div, you can create a component and that component will also render other components. Remember, these components are just elements, so you can have a component that just returns a li element, for example. 
 
