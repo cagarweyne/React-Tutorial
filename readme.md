@@ -8,7 +8,7 @@ One of the reasons why React is becoming very popular is the way in which it int
 
 This is why React is very fast when it comes to performance, it uses a diffing algorthim to determine which part of the real DOM needs to be updated, and when there is a change, only that part is updated in the real DOM and everything else stays intact. 
 
-##Lesson 2:  What is JSX? 
+## Lesson 2:  What is JSX? 
 
 This is a JavaScript syntax that lets you write HTML inside your JavaScript. I know that might sound a little off, HTML inside a JavaScript?! According to Facebook, you don't have to use JSX with React but they highly recommend that you do since it is a concise and familiar syntax for defining tree like structures. You can read more about JSX [here](https://facebook.github.io/react/docs/jsx-in-depth.html) on the facebook API docs.  The browsers don’t recognise JSX files, JSX files get compiled to JavaScript that are then passed to the `React.createElement` function. 
 
@@ -38,7 +38,7 @@ JSX is an extension of javascript that lets us write what looks like HTML alongs
 JSX must first be complied from jsx to javascript so that the browser can understand what's going on.
 We use JSX because it's a lot more clear and concise about the HTML structure and React components than the equivalent Javascript.  
 
-##Lesson 3: Hello React!
+## Lesson 3: Hello React!
 
 Before you create any React component you need to get the library, you can download the latest and greatest version of react from the official Facebook g Github page [here](https://facebook.github.io/react/downloads.html) and then you will have a folder that contains several files.
 
