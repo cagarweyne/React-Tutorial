@@ -1,6 +1,6 @@
-#React Tutorial 
+# React Tutorial 
 
-##Lesson 1: What is React? 
+## Lesson 1: What is React? 
 
 React is simply a JavaScript library whose single purpose is to help you build large applications with data that changes over time. In a nutshell, React is simply the V in the Model View Controller architecture (MVC). As such, it is difficult to compare it to other frameworks like Angular. When building apps in React you build things one a time using components. React was built by Facebook and released in early 2013, there is also React Native, which uses React, to create native iOs and Android apps. But React is only for web browsers in the front end.
 
@@ -12,7 +12,7 @@ This is why React is very fast when it comes to performance, it uses a diffing a
 
 This is a JavaScript syntax that lets you write HTML inside your JavaScript. I know that might sound a little off, HTML inside a JavaScript?! According to Facebook, you don't have to use JSX with React but they highly recommend that you do since it is a concise and familiar syntax for defining tree like structures. You can read more about JSX [here](https://facebook.github.io/react/docs/jsx-in-depth.html) on the facebook API docs.  The browsers don’t recognise JSX files, JSX files get compiled to JavaScript that are then passed to the `React.createElement` function. 
 
-####JSX syntax 
+#### JSX syntax 
 
 ```javascript 
 {
@@ -96,7 +96,7 @@ Here is our boiler plate code for writing a simple Hello React! To the screen.
 
 ```
 
-##Lesson 4: Props
+## Lesson 4: Props
 
 Now that we know how to render content to the page, we want to be able to provide some data that can be used by the component. The simple Hello React example we created is just a static component. We're going to expand our Hello React example and this time we will provide some data that can be used by the component.
 
@@ -289,7 +289,7 @@ ReactDOM.render(
     document.getElementById('content')
   );
 ```
-###using props
+### using props
 
 When nesting components you can also pass down data to the child components and they will have access to these items via its props object. In the Description component that we created previously, we hard coded the text description, however, to reuse this component we can make a small change inside the render method of the Description component: 
 
@@ -372,7 +372,7 @@ handleClick: function(){
 ```
 The callback function is passed down the same way we passed down the text key, so handleClick is the key and the value is the function that is attached to this component called handleClick. In this example, I have given the callback function to the last instance of the Description component. When you click on the text for this component you should see the alert message.
 
-##Lesson 6: Lists 
+## Lesson 6: Lists 
 
 As we saw previously, we can reuse components by passing down different data and have that component do all of the rendering without creating multiple instances of the same functionality. React lets you extend this reusability feature with the use of a map function when you want to display lists. First I will create an object with one property, which is an array that will be passed to the rendered component: 
 
